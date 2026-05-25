@@ -1,27 +1,56 @@
 # whiteboard-styles
 
-飞书画板风格库 — 为 Claude Code 画板创作提供 22 种可复用视觉风格模板。
+**飞书画板风格库** — 为 Claude Code + [lark-cli](https://github.com/larksuite/cli) 画板创作提供 32 种可复用视觉风格模板。
 
-## 简介
+<p align="center">
+  <a href="https://github.com/larksuite/cli">
+    <img src="https://img.shields.io/badge/lark--cli-companion-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6Ii8+PC9zdmc+" alt="lark-cli" />
+  </a>
+  <img src="https://img.shields.io/badge/styles-32-green" alt="32 styles" />
+  <img src="https://img.shields.io/badge/license-MIT-yellow" alt="MIT License" />
+</p>
 
-这是一个 [Claude Code Skill](https://docs.anthropic.com/en/docs/claude-code/skills)，配合 [lark-whiteboard](https://github.com/larksuite/cli) skill 使用，在创建飞书画板 SVG/DSL 时自动应用预设的视觉风格。
+## 关系说明
+
+本 skill 是 [lark-cli](https://github.com/larksuite/cli) 的配套风格库：
+
+```
+Claude Code (AI Agent)
+  ├── lark-cli                          ← 飞书操作 CLI（创建画板、上传、查询）
+  │     └── lark-whiteboard skill       ← 画板渲染引擎（SVG/DSL → 飞书画板）
+  │           └── whiteboard-styles     ← 本项目（32 种视觉风格参数）
+  └── 用户对话
+        "用 Google 风格画个组织架构图"  → 自动匹配风格 → 生成 SVG → 渲染 → 上传飞书画板
+```
 
 ## 风格示例
+
+### 全球科技公司
+
+| Claude Code | Google |
+|:---:|:---:|
+| ![Claude Code](examples/claude-code.png) | ![Google](examples/google.png) |
+| 暖橙棕终端感、AI 原生 | 四色品牌、Material You |
+
+| Microsoft | Netflix |
+|:---:|:---:|
+| ![Microsoft](examples/microsoft.png) | ![Netflix](examples/netflix.png) |
+| Fluent Design、四色方格 | 深黑红、电影沉浸感 |
+
+| Spotify | Apple |
+|:---:|:---:|
+| ![Spotify](examples/spotify.png) | ![Apple](examples/apple.png) |
+| 深绿黑、活力绿、音乐感 | 大圆角、精致留白、简约高端 |
 
 | Vercel | Excalidraw |
 |:---:|:---:|
 | ![Vercel](examples/vercel.png) | ![Excalidraw](examples/excalidraw.png) |
 | 黑白灰、零圆角、工程师美学 | 手绘线条、彩色便签、白板协作 |
 
-| Neon | Apple |
+| Neon | Corporate |
 |:---:|:---:|
-| ![Neon](examples/neon.png) | ![Apple](examples/apple.png) |
-| 霓虹发光、赛博朋克、未来感 | 大圆角、精致留白、简约高端 |
-
-| Corporate | |
-|:---:|:---:|
-| ![Corporate](examples/corporate.png) | |
-| 深蓝金配色、稳重正式、商务汇报 | |
+| ![Neon](examples/neon.png) | ![Corporate](examples/corporate.png) |
+| 霓虹发光、赛博朋克、未来感 | 深蓝金配色、稳重正式、商务汇报 |
 
 ## 安装
 
@@ -30,8 +59,6 @@
 ```
 帮我安装这个 skill: https://github.com/inhai-wiki/whiteboard-styles
 ```
-
-AI 会自动下载并安装到 `~/.claude/skills/whiteboard-styles/`。
 
 或者手动安装：
 
@@ -44,29 +71,46 @@ git clone https://github.com/inhai-wiki/whiteboard-styles.git ~/.claude/skills/w
 安装后，在 Claude Code 对话中画图时直接指定风格：
 
 ```
-画一个组织架构图，用 Vercel 风格
+画一个组织架构图，用 Google 风格
 ```
 
 ```
-帮我画个技术架构图，GitHub 风格
+帮我画个技术架构图，Claude Code 风格
 ```
 
 ```
-用赛博朋克风格画个流程图
+用 Netflix 风格画个流程图
 ```
 
 ```
-画个组织架构图，Notion 那种感觉
+画个组织架构图存到飞书画板，用 Microsoft 风格
 ```
 
 不指定风格时，skill 会根据图表类型和场景自动推荐最合适的风格。
 
-## 包含风格（22 种）
+## 全部风格（32 种）
 
-| # | 风格 ID | 灵感来源 | 关键词 |
+### 全球科技公司
+
+| # | 风格 ID | 品牌 | 关键词 |
+|---|---|---|---|
+| 23 | `claude-code` | Claude Code | 暖橙棕终端感、AI 原生 |
+| 24 | `google` | Google | 四色品牌、Material You |
+| 25 | `microsoft` | Microsoft | Fluent Design、四色方格 |
+| 26 | `meta` | Meta/Facebook | 渐变蓝、现代社交科技 |
+| 27 | `amazon` | Amazon/AWS | 深蓝橙、云计算企业级 |
+| 28 | `netflix` | Netflix | 深黑红、电影沉浸感 |
+| 29 | `spotify` | Spotify | 深绿黑、活力绿 |
+| 30 | `tesla` | Tesla | 极简黑白红、工程美学 |
+| 31 | `openai` | OpenAI | 柔和绿、AI 前沿 |
+| 32 | `bytedance` | ByteDance/TikTok | 黑白粉青、短视频活力 |
+
+### 设计工具 & 协作平台
+
+| # | 风格 ID | 品牌 | 关键词 |
 |---|---|---|---|
 | 1 | `vercel` | Vercel | 黑白灰、零圆角、工程师美学 |
-| 2 | `apple` | Apple | 大圆角、精致留白、SF 风格 |
+| 2 | `apple` | Apple | 大圆角、精致留白 |
 | 3 | `notion` | Notion | 超轻边框、文档内嵌感 |
 | 4 | `figma` | Figma | 彩色标签、网格系统 |
 | 5 | `excalidraw` | Excalidraw | 手绘线条、便签黄、白板协作 |
@@ -78,15 +122,20 @@ git clone https://github.com/inhai-wiki/whiteboard-styles.git ~/.claude/skills/w
 | 11 | `linear` | Linear | 深色、紫色调、项目管理 |
 | 12 | `whimsical` | Whimsical | 柔和圆角、淡彩 |
 | 13 | `lucidchart` | Lucidchart | 标准流程图、企业蓝灰 |
-| 14 | `dark-mode` | Catppuccin Mocha | 深色背景、高对比 |
-| 15 | `neon` | Cyberpunk 2077 | 霓虹发光、未来感 |
-| 16 | `blueprint` | 建筑蓝图 | 深蓝底色、工程图纸 |
-| 17 | `pastel` | 马卡龙色系 | 柔和淡彩、温馨 |
-| 18 | `corporate` | 咨询报告 | 深蓝金配色、稳重 |
-| 19 | `minimal` | Dieter Rams | 最少元素、最大留白 |
-| 20 | `monochrome` | 报纸印刷 | 纯黑白、无彩色 |
-| 21 | `isometric` | 技术插画 | 等距投影、2.5D |
-| 22 | `duotone` | Spotify Wrapped | 双色高对比、海报感 |
+
+### 通用设计风格
+
+| # | 风格 ID | 名称 | 关键词 |
+|---|---|---|---|
+| 14 | `dark-mode` | 深色模式 | 深色背景、高对比、护眼 |
+| 15 | `neon` | 赛博朋克 | 霓虹发光、未来感 |
+| 16 | `blueprint` | 蓝图工程 | 深蓝底色、工程图纸 |
+| 17 | `pastel` | 马卡龙柔和 | 柔和淡彩、温馨 |
+| 18 | `corporate` | 商务正式 | 深蓝金配色、稳重 |
+| 19 | `minimal` | 极简主义 | 最少元素、最大留白 |
+| 20 | `monochrome` | 单色黑白 | 纯黑白、无彩色 |
+| 21 | `isometric` | 等距 2.5D | 等距投影、立体感 |
+| 22 | `duotone` | 双色调 | 两色高对比、海报感 |
 
 ## 文件结构
 
@@ -95,6 +144,11 @@ whiteboard-styles/
 ├── SKILL.md                          # 主入口：触发规则、工作流、风格路由
 ├── README.md                         # 本文件
 ├── examples/                         # 风格示例截图
+│   ├── claude-code.png
+│   ├── google.png
+│   ├── microsoft.png
+│   ├── netflix.png
+│   ├── spotify.png
 │   ├── vercel.png
 │   ├── excalidraw.png
 │   ├── neon.png
