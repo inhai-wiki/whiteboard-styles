@@ -873,6 +873,402 @@ decoration:
 
 ---
 
+## 23. Claude Code `claude-code`
+
+> 灵感：Anthropic Claude Code CLI — 暖橙棕色调、终端感、AI 原生
+
+```yaml
+palette:
+  background: "#1C1917"       # 深棕黑（终端底色）
+  card: "#292524"             # 深棕卡片
+  primary: "#D97706"          # Claude 暖橙
+  border: "#44403C"           # 石板棕边框
+  text: "#FAFAF9"             # 暖白文字
+  textSecondary: "#A8A29E"    # 暖灰
+  textMuted: "#78716C"        # 暗暖灰
+  accent: "#D97706"           # 橙色强调
+  secondary: "#7C3AED"        # 紫色（Anthropic 品牌辅助）
+shape:
+  borderRadius: 8
+  borderWidth: 1
+  shadow: none
+typography:
+  titleSize: 14
+  titleWeight: 600
+  bodySize: 13
+  bodyWeight: 400
+  labelSize: 11
+  labelWeight: 500
+  labelSpacing: 0.5
+  labelCase: normal
+connector:
+  color: "#44403C"
+  width: 1
+  style: solid
+decoration:
+  gradients: false
+  icons: terminal-style
+  extraEmbellishment: warm-terminal-glow
+```
+
+---
+
+## 24. Google `google`
+
+> 灵感：Google Material You — 四色品牌、圆润、友好
+
+```yaml
+palette:
+  background: "#F8F9FA"
+  card: "#FFFFFF"
+  primary: "#1A73E8"          # Google 蓝
+  border: "#DADCE0"
+  text: "#202124"
+  textSecondary: "#5F6368"
+  textMuted: "#9AA0A6"
+  accent: "#EA4335"           # Google 红
+  brandColors: ["#4285F4", "#EA4335", "#FBBC04", "#34A853"]  # 蓝/红/黄/绿
+shape:
+  borderRadius: 12
+  borderWidth: 1
+  shadow: soft
+typography:
+  titleSize: 16
+  titleWeight: 500
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 12
+  labelWeight: 500
+  labelSpacing: 0
+  labelCase: normal
+connector:
+  color: "#DADCE0"
+  width: 1.5
+  style: solid
+decoration:
+  gradients: false
+  icons: google-style
+  extraEmbellishment: four-color-accents
+```
+
+---
+
+## 25. Microsoft `microsoft`
+
+> 灵感：Microsoft Fluent Design — 四色方格、专业、清晰
+
+```yaml
+palette:
+  background: "#F3F2F1"
+  card: "#FFFFFF"
+  primary: "#0078D4"          # Microsoft 蓝
+  border: "#D2D0CE"
+  text: "#323130"
+  textSecondary: "#605E5C"
+  textMuted: "#A19F9D"
+  accent: "#0078D4"
+  brandColors: ["#F25022", "#7FBA00", "#00A4EF", "#FFB900"]  # 红/绿/蓝/黄
+shape:
+  borderRadius: 4
+  borderWidth: 1
+  shadow: soft
+typography:
+  titleSize: 16
+  titleWeight: 600
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 12
+  labelWeight: 400
+  labelSpacing: 0
+  labelCase: normal
+connector:
+  color: "#D2D0CE"
+  width: 1.5
+  style: solid
+decoration:
+  gradients: false
+  icons: fluent-style
+  extraEmbellishment: four-square-brand
+```
+
+---
+
+## 26. Meta `meta`
+
+> 灵感：Meta/Facebook — 渐变蓝、现代社交科技
+
+```yaml
+palette:
+  background: "#F0F2F5"
+  card: "#FFFFFF"
+  primary: "#1877F2"          # Meta 蓝
+  border: "#CED0D4"
+  text: "#1C1E21"
+  textSecondary: "#606770"
+  textMuted: "#8A8D91"
+  accent: "#1877F2"
+  gradientColors: ["#0078FF", "#0066FF", "#0055FF"]  # 渐变蓝
+shape:
+  borderRadius: 12
+  borderWidth: 0
+  shadow: soft
+typography:
+  titleSize: 16
+  titleWeight: 700
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 12
+  labelWeight: 500
+  labelSpacing: 0
+  labelCase: normal
+connector:
+  color: "#CED0D4"
+  width: 1.5
+  style: solid
+decoration:
+  gradients: careful          # 谨慎使用蓝色渐变
+  icons: meta-style
+  extraEmbellishment: gradient-headers
+```
+
+---
+
+## 27. Amazon `amazon`
+
+> 灵感：Amazon/AWS — 深蓝橙渐变、云计算、企业级
+
+```yaml
+palette:
+  background: "#F2F3F3"
+  card: "#FFFFFF"
+  primary: "#232F3E"          # Amazon 深蓝
+  border: "#D5DBDB"
+  text: "#16191F"
+  textSecondary: "#545B64"
+  textMuted: "#879596"
+  accent: "#FF9900"           # Amazon 橙
+shape:
+  borderRadius: 4
+  borderWidth: 1
+  shadow: soft
+typography:
+  titleSize: 16
+  titleWeight: 700
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 12
+  labelWeight: 500
+  labelSpacing: 0
+  labelCase: normal
+connector:
+  color: "#D5DBDB"
+  width: 1.5
+  style: solid
+decoration:
+  gradients: false
+  icons: aws-style
+  extraEmbellishment: orange-underline
+```
+
+---
+
+## 28. Netflix `netflix`
+
+> 灵感：Netflix — 深黑红、电影感、沉浸式
+
+```yaml
+palette:
+  background: "#141414"       # Netflix 黑
+  card: "#1A1A1A"
+  primary: "#E50914"          # Netflix 红
+  border: "#333333"
+  text: "#FFFFFF"
+  textSecondary: "#B3B3B3"
+  textMuted: "#666666"
+  accent: "#E50914"
+shape:
+  borderRadius: 4
+  borderWidth: 1
+  shadow: none
+typography:
+  titleSize: 16
+  titleWeight: 700
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 11
+  labelWeight: 600
+  labelSpacing: 1
+  labelCase: uppercase
+connector:
+  color: "#333333"
+  width: 1.5
+  style: solid
+decoration:
+  gradients: false
+  icons: cinematic
+  extraEmbellishment: red-accent-lines
+```
+
+---
+
+## 29. Spotify `spotify`
+
+> 灵感：Spotify — 深绿黑、活力绿、音乐感
+
+```yaml
+palette:
+  background: "#121212"       # Spotify 深黑
+  card: "#181818"
+  primary: "#1DB954"          # Spotify 绿
+  border: "#282828"
+  text: "#FFFFFF"
+  textSecondary: "#B3B3B3"
+  textMuted: "#535353"
+  accent: "#1DB954"
+shape:
+  borderRadius: 8
+  borderWidth: 0
+  shadow: none
+typography:
+  titleSize: 16
+  titleWeight: 700
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 11
+  labelWeight: 500
+  labelSpacing: 0
+  labelCase: normal
+connector:
+  color: "#282828"
+  width: 1.5
+  style: solid
+decoration:
+  gradients: false
+  icons: music-style
+  extraEmbellishment: green-glow
+```
+
+---
+
+## 30. Tesla `tesla`
+
+> 灵感：Tesla — 极简黑白红、工程美学、未来汽车
+
+```yaml
+palette:
+  background: "#FFFFFF"
+  card: "#F5F5F5"
+  primary: "#CC0000"          # Tesla 红
+  border: "#E0E0E0"
+  text: "#000000"
+  textSecondary: "#666666"
+  textMuted: "#999999"
+  accent: "#CC0000"
+shape:
+  borderRadius: 2             # 几乎直角，工程感
+  borderWidth: 1
+  shadow: none
+typography:
+  titleSize: 14
+  titleWeight: 700
+  bodySize: 13
+  bodyWeight: 400
+  labelSize: 10
+  labelWeight: 600
+  labelSpacing: 2
+  labelCase: uppercase
+connector:
+  color: "#E0E0E0"
+  width: 1
+  style: solid
+decoration:
+  gradients: false
+  icons: engineering
+  extraEmbellishment: red-detail-line
+```
+
+---
+
+## 31. OpenAI `openai`
+
+> 灵感：OpenAI — 柔和渐变、AI 前沿、理性优雅
+
+```yaml
+palette:
+  background: "#FFFFFF"
+  card: "#F7F7F8"
+  primary: "#10A37F"          # OpenAI 绿
+  border: "#E5E5E5"
+  text: "#202123"
+  textSecondary: "#6E6E80"
+  textMuted: "#ACACBE"
+  accent: "#10A37F"
+  gradientColors: ["#10A37F", "#1A7F64", "#2D5E4E"]
+shape:
+  borderRadius: 12
+  borderWidth: 1
+  shadow: soft
+typography:
+  titleSize: 16
+  titleWeight: 600
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 11
+  labelWeight: 500
+  labelSpacing: 0
+  labelCase: normal
+connector:
+  color: "#E5E5E5"
+  width: 1
+  style: solid
+decoration:
+  gradients: careful
+  icons: minimal-ai
+  extraEmbellishment: green-gradient-headers
+```
+
+---
+
+## 32. ByteDance `bytedance`
+
+> 灵感：字节跳动/TikTok — 黑白粉青、短视频活力
+
+```yaml
+palette:
+  background: "#000000"
+  card: "#161823"
+  primary: "#FE2C55"          # TikTok 粉红
+  border: "#2F3142"
+  text: "#FFFFFF"
+  textSecondary: "#A0A0B0"
+  textMuted: "#4E4F60"
+  accent: "#25F4EE"           # TikTok 青
+  brandColors: ["#FE2C55", "#25F4EE", "#FFFFFF"]  # 粉/青/白
+shape:
+  borderRadius: 6
+  borderWidth: 1
+  shadow: none
+typography:
+  titleSize: 16
+  titleWeight: 700
+  bodySize: 14
+  bodyWeight: 400
+  labelSize: 11
+  labelWeight: 600
+  labelSpacing: 0
+  labelCase: normal
+connector:
+  color: "#2F3142"
+  width: 1.5
+  style: solid
+decoration:
+  gradients: false
+  icons: tiktok-style
+  extraEmbellishment: pink-cyan-dual
+```
+
+---
+
 ## 混合定制示例
 
 ### Vercel + 蓝色主题
